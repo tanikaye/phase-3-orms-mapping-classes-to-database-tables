@@ -1,7 +1,16 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 
 require 'pry'
 require_relative '../config/environment'
+
+hello = Song.new(name: "Hello", album: "25")
+# => #<Song:0x00007fed21935128 @album="25", @id=nil, @name="Hello">
+hello.save
+# => #<Song:0x00007fb61d202a58 @album="25", @id=3, @name="Hello">
+ninety_nine_problems = Song.new(name: "99 Problems", album: "The Black Album")
+# => #<Song:0x00007fed218c6200 @album="The Black Album", @id=nil, @name="99 Problems">
+ninety_nine_problems.save
+# => #<Song:0x00007fb61d14c820 @album="The Black Album", @id=4, @name="99 Problems">
 
 binding.pry
 "pls"
